@@ -3,8 +3,7 @@
   "version": "1.0",
   "description": "Build a Datetime Extension!",
   "permissions": [
-    "activeTab",
-    "storage"
+    "declarativeContent"
   ],
   "manifest_version": 2,
   "background": {

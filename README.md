@@ -1,6 +1,15 @@
 # Web Extension Boilerplate
 
+<div align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/6290720/99679424-47673b80-2abf-11eb-9c2f-e7b2b3411d24.png" />
+  <br />
+  <br />
+</div>
+
 Web Extension Boilerplate provide the skeleton to start developing web extension
+
+[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/davidnguyen179/web-extension-boilerplate/pulls)
+![ci/cd](https://github.com/davidnguyen179/web-extension-boilerplate/workflows/ci/cd/badge.svg)
 
 ## Development
 
@@ -50,7 +59,9 @@ npm run edge
 npm run firefox
 ```
 
-## Load package to Chrome
+## Load package to browsers
+
+**Chrome**
 
 1. On the browser's URL address bar
 2. Enter `chrome://extensions/`
@@ -61,7 +72,7 @@ npm run firefox
 
 Check here for more detail: [https://developer.chrome.com/extensions/getstarted](https://developer.chrome.com/extensions/getstarted)
 
-## Load package to Edge
+**Edge**
 
 1. On the browser's URL address bar
 2. Enter `edge://extensions/`
@@ -70,7 +81,7 @@ Check here for more detail: [https://developer.chrome.com/extensions/getstarted]
 5. Browse to `dist/` in source code
 6. Done!
 
-## Load package to Firefox
+**Firefox**
 
 1. On the browser's URL address bar
 2. Enter `about:debugging#/runtime/this-firefox`
@@ -79,4 +90,8 @@ Check here for more detail: [https://developer.chrome.com/extensions/getstarted]
 5. Done!
 
 Check here for more detail: [https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+
+## Showcase
+
+This boilerplate is used to develop [Spotify Web Extension](https://spotify-extension.netlify.app/)
 
