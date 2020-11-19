@@ -1,0 +1,60 @@
+{
+  "name": "web-extension-boilerplate",
+  "version": "1.0.0",
+  "description": "Web extension boilerplate",
+  "main": "background.js",
+  "scripts": {
+    "prettier": "prettier --write '**/**/*.{ts,tsx}'",
+    "dev-chrome": "env BROWSER='chrome' webpack --config webpack/webpack.dev.js --watch",
+    "dev-firefox": "env BROWSER='firefox' webpack --config webpack/webpack.dev.js --watch",
+    "dev-edge": "env BROWSER='edge' webpack --config webpack/webpack.dev.js --watch",
+    "chrome": "rimraf dist && env BROWSER='chrome' webpack --config webpack/webpack.prod.js",
+    "firefox": "rimraf dist && env BROWSER='firefox' webpack --config webpack/webpack.prod.js",
+    "edge": "rimraf dist && env BROWSER='edge' webpack --config webpack/webpack.prod.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidnguyen179/web-extension-boilerplate.git"
+  },
+  "keywords": [
+    "chrome extension",
+    "microsoft edge extension",
+    "firefox addon",
+    "web extension",
+    "typescript",
+    "ts",
+    "jest",
+    "sinon"
+  ],
+  "author": "David Nguyen <dzungnguyen179@gmail.com> (dzungnguyen179@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidnguyen179/web-extension-boilerplate/issues"
+  },
+  "homepage": "https://github.com/davidnguyen179/web-extension-boilerplate#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/chrome": "0.0.112",
+    "@types/jest": "^25.2.3",
+    "@types/sinon": "^9.0.5",
+    "babel-jest": "^26.0.1",
+    "copy-webpack-plugin": "^6.0.1",
+    "git-hooks-plus": "^1.0.1",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "sinon": "^9.0.3",
+    "terser-webpack-plugin": "^3.0.1",
+    "ts-jest": "^26.0.0",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2",
+    "web-ext-types": "^3.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.5.0"
+  }
+}

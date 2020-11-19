@@ -1,0 +1,19 @@
+Spotify Player Chrome Web Store & Mozilla Add-on Store & Microsoft Edge Add-on Store Privacy Policies.
+======================================================================================================
+
+Introduction
+============
+
+This is a mini Spotify player that allows the user seamlessly play/pause/like or jump to previous or next track while surfing the web without having to navigate to the Spotify user interface.
+
+Information We Collect
+======================
+
+- It does not collect your data.
+- It stores data only locally on your hard drive using localStorage API.
+- It does not store anything on servers on the Internet.
+
+How it uses your cookies
+========================
+
+It uses your cookies data to get song information to display in the extension and allow you to control your music player via Spotify API.

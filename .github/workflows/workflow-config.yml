@@ -1,0 +1,40 @@
+name: 'ci/cd'
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  test:
+    # Job name
+    name: test
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        id: checkout
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: cache
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+      - name: Install Packages
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Run Test
+        run: npm test -- --coverage
+      - name: Trigger Codecov
+        run: bash <(curl -s https://codecov.io/bash)

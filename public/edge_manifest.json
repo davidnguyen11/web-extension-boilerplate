@@ -1,0 +1,29 @@
+{
+  "name": "datetime",
+  "version": "1.0",
+  "description": "Build a Datetime Extension!",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "manifest_version": 2,
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/date-time-16.png",
+      "32": "images/date-time-32.png",
+      "48": "images/date-time-48.png",
+      "128": "images/date-time-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/date-time-16.png",
+    "32": "images/date-time-32.png",
+    "48": "images/date-time-48.png",
+    "128": "images/date-time-128.png"
+  }
+}
