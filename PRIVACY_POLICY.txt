@@ -11,10 +11,10 @@ Information We Collect
 
 Does your web extension collect data?
 
-- I collect this
-- I don't collect that
+- I collect data
+- I don't collect data
 
-How it uses your cookies
+How it uses cookies
 ========================
 
-If your web extension uses cookie. Describe where does your extension use cookie? and Why?
+If your web extension uses cookies, describe where your extension uses cookies and why?
