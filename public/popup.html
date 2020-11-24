@@ -3,12 +3,18 @@
 
 <head>
   <style>
+    body {
+      margin: 0
+    }
+
     .root {
-      height: 70px;
-      width: 200px;
+      height: 100px;
+      width: 240px;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .root__wrapper {
@@ -29,7 +35,7 @@
 </head>
 
 <body>
-  <div class="root">
+  <div class="root" id="root">
     <div class="root__wrapper">
       <h2 class="root__wrapper__h2" id="date"></h2>
       <h3 class="root__wrapper__h3" id="time"></h3>
