@@ -19,8 +19,8 @@ describe('testing utils', () => {
   describe('testing getDisplayDateTime', () => {
     it('should return Thu Nov 19 23:00', () => {
       const actual = getDisplayDateTime();
-      const expected = 'Thu Nov 19 23:00';
-      expect(actual).toBe(expected);
+      const expected = { date: 'Thu Nov 19', time: '23:00' };
+      expect(actual).toEqual(expected);
     });
 
     it('should return Thu Nov 19 01:00', () => {
@@ -28,8 +28,8 @@ describe('testing utils', () => {
         now: new Date(2020, 10, 19, 1, 0),
       });
       const actual = getDisplayDateTime();
-      const expected = 'Thu Nov 19 01:00';
-      expect(actual).toBe(expected);
+      const expected = { date: 'Thu Nov 19', time: '01:00' };
+      expect(actual).toEqual(expected);
     });
 
     it('should return Thu Nov 19 23:23', () => {
@@ -37,8 +37,8 @@ describe('testing utils', () => {
         now: new Date(2020, 10, 19, 23, 23),
       });
       const actual = getDisplayDateTime();
-      const expected = 'Thu Nov 19 23:23';
-      expect(actual).toBe(expected);
+      const expected = { date: 'Thu Nov 19', time: '23:23' };
+      expect(actual).toEqual(expected);
     });
   });
 });

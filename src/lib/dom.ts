@@ -1,6 +1,10 @@
 import { getDisplayDateTime } from './utils';
 
 export function renderDateTime() {
-  const headingDatetime = document.getElementById('datetime');
-  headingDatetime.innerText = getDisplayDateTime();
+  const { date, time } = getDisplayDateTime();
+  const headingDate = document.getElementById('date');
+  const headingTime = document.getElementById('time');
+
+  headingDate.innerText = date;
+  headingTime.innerText = time;
 }

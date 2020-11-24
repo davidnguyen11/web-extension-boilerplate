@@ -3,19 +3,37 @@
 
 <head>
   <style>
-    .wrapper {
+    .root {
       height: 70px;
       width: 200px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
+    .root__wrapper {
+      width: 100%;
+      text-align: center;
+    }
+
+    .root__wrapper__h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .root__wrapper__h3 {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <h2 id="datetime"></h2>
+  <div class="root">
+    <div class="root__wrapper">
+      <h2 class="root__wrapper__h2" id="date"></h2>
+      <h3 class="root__wrapper__h3" id="time"></h3>
+    </div>
   </div>
 
   <script src="js/popup.js"></script>

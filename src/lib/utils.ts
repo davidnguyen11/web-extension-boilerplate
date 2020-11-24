@@ -14,7 +14,10 @@ export function getDisplayDateTime() {
     min = `0${min}`;
   }
 
-  return `${day} ${month} ${date} ${hours}:${min}`;
+  return {
+    date: `${day} ${month} ${date}`,
+    time: `${hours}:${min}`,
+  };
 }
 
 export function getMonth() {
