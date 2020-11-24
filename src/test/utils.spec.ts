@@ -88,9 +88,9 @@ describe('testing utils', () => {
       expect(actual).toEqual(expected);
     });
 
-    it('should return afternoon color code - #a64ca6', () => {
+    it('should return afternoon color code - #000000', () => {
       const actual = getPalette('afternoon');
-      const expected = '#a64ca6';
+      const expected = '#000000';
       expect(actual).toEqual(expected);
     });
 

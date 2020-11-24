@@ -60,7 +60,7 @@ export function getPeriod(date: Date): DayPeriod {
 export function getPalette(period: DayPeriod) {
   return {
     morning: '#282e54',
-    afternoon: '#a64ca6',
+    afternoon: '#000000',
     night: '#ffdd91'
   }[period];
 }
