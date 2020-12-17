@@ -42,7 +42,6 @@ describe('testing utils', () => {
     });
   });
 
-
   describe('testing getPeriod', () => {
     it('should return morning - 05:00 AM', () => {
       const actual = getPeriod(new Date(2020, 10, 19, 5, 0));

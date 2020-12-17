@@ -26,18 +26,26 @@ export function getDisplayDateTime() {
 export function getMonth() {
   const date = new Date();
   const months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
   return months[date.getMonth()].substring(0, 3);
 }
 
 export function getDay() {
   const date = new Date();
-  const days = [
-    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sartuday', 'Sunday'
-  ];
-  return days[date.getDay() - 1].substring(0, 3);
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return days[date.getDay()].substring(0, 3);
 }
 
 export function getPeriod(date: Date): DayPeriod {
@@ -61,6 +69,6 @@ export function getPalette(period: DayPeriod) {
   return {
     morning: '#282e54',
     afternoon: '#000000',
-    night: '#ffdd91'
+    night: '#ffdd91',
   }[period];
 }
