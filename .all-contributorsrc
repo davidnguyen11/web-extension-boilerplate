@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "3BenLee",
+      "name": "Ben Harned",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35267414?v=4",
+      "profile": "http://benlee3.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "web-extension-boilerplate",
+  "projectOwner": "davidnguyen179",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
