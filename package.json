@@ -5,6 +5,7 @@
   "main": "background.js",
   "scripts": {
     "code:lint": "eslint '**/**/*.{ts,tsx}'",
+    "code:lint-fix": "eslint --fix '**/**/*.{ts,tsx}'",
     "code:prettier": "prettier --write '**/**/*.{ts,tsx}'",
     "code:typecheck": "./node_modules/.bin/tsc --noEmit",
     "app:chrome": "rimraf dist && cross-env BROWSER='chrome' webpack --config webpack/webpack.prod.js",
