@@ -1,4 +1,7 @@
 # Web Extension Boilerplate
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
   <img width="300" src="https://user-images.githubusercontent.com/6290720/99804359-3d584200-2b7e-11eb-9cff-a2d7e207415e.png" />
@@ -127,3 +130,23 @@ You can modify the `.github/workflows` to show the CI/CD flow.
 ## Showcase
 
 This boilerplate was used to develop [Spotify Web Extension](https://spotify-extension.netlify.app/)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.dzungnguyen.dev"><img src="https://avatars.githubusercontent.com/u/6290720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Nguyen</b></sub></a><br /><a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=davidnguyen179" title="Code">💻</a> <a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=davidnguyen179" title="Documentation">📖</a> <a href="#design-davidnguyen179" title="Design">🎨</a> <a href="#maintenance-davidnguyen179" title="Maintenance">🚧</a> <a href="https://github.com/davidnguyen179/web-extension-boilerplate/pulls?q=is%3Apr+reviewed-by%3Adavidnguyen179" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=davidnguyen179" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
