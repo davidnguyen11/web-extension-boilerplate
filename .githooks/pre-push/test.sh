@@ -1,5 +1,4 @@
 #!/bin/bash
 
-echo "Running unit test 🚀🚀"
-npm test -- --coverage
-
+echo "Running unit test... 🤞 🚑 💊"
+npm run test:unit -- --coverage

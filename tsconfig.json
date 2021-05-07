@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ES6",
     "target": "es6",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "noImplicitAny": false,
     "sourceMap": false,
     "rootDir": "src",
     "outDir": "dist/js",
     "noEmitOnError": true,
-    "typeRoots": ["node_modules/@types", "node_modules/web-ext-types"],
-    "types": ["jest", "node"]
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/web-ext-types"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ]
   }
 }

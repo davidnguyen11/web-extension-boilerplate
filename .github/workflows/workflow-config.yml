@@ -1,6 +1,6 @@
 name: 'ci/cd'
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [14.x]
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v2
         id: checkout
       - name: Use Node.js ${{ matrix.node-version }}
@@ -31,10 +31,20 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - name: Install Packages
+      - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
-      - name: Run Test
-        run: npm test -- --coverage
-      - name: Trigger Codecov
+      - name: Running typecheck... 🩺 🔬 🔭
+        run: npm run code:typecheck
+      - name: Running eslint... 👀
+        run: npm run code:lint
+      - name: Running unit test... 🤞 🚑 💊
+        run: npm run test:unit -- --runInBand --coverage
+      - name: Trigger codecov
         run: bash <(curl -s https://codecov.io/bash)
+      - name: Run build Chrome
+        run: npm run app:chrome
+      - name: Run build Firefox
+        run: npm run app:firefox
+      - name: Run build Edge
+        run: npm run app:edge
