@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "immint023",
+      "name": "Minh Ngo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38607460?v=4",
+      "profile": "https://github.com/immint023",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "web-extension-boilerplate",
+  "projectOwner": "davidnguyen179",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
