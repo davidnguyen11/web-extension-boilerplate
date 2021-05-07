@@ -6,7 +6,31 @@
   "commit": false,
   "contributors": [
     {
-      "login": "3BenLee",
+      "login": "davidnguyen179",
+      "name": "David Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290720?v=4",
+      "profile": "https://www.dzungnguyen.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "maintenance",
+        "review",
+        "test"
+      ]
+    },
+    {
+     "login": "immint023",
+      "name": "Minh Ngo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38607460?v=4",
+      "profile": "https://github.com/immint023",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+     "login": "3BenLee",
       "name": "Ben Harned",
       "avatar_url": "https://avatars.githubusercontent.com/u/35267414?v=4",
       "profile": "http://benlee3.com",
