@@ -5,7 +5,9 @@
   "permissions": [],
   "manifest_version": 2,
   "background": {
-    "page": "background.html",
+    "scripts": [
+      "background.js"
+    ],
     "persistent": true
   },
   "browser_action": {
