@@ -18,6 +18,16 @@
         "review",
         "test"
       ]
+    },
+    {
+     "login": "immint023",
+      "name": "Minh Ngo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38607460?v=4",
+      "profile": "https://github.com/immint023",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
