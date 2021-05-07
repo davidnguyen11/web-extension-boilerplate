@@ -6,7 +6,21 @@
   "commit": false,
   "contributors": [
     {
-      "login": "immint023",
+      "login": "davidnguyen179",
+      "name": "David Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290720?v=4",
+      "profile": "https://www.dzungnguyen.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "maintenance",
+        "review",
+        "test"
+      ]
+    },
+    {
+     "login": "immint023",
       "name": "Minh Ngo",
       "avatar_url": "https://avatars.githubusercontent.com/u/38607460?v=4",
       "profile": "https://github.com/immint023",
