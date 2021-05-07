@@ -1,0 +1,29 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "davidnguyen179",
+      "name": "David Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290720?v=4",
+      "profile": "https://www.dzungnguyen.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "maintenance",
+        "review",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "web-extension-boilerplate",
+  "projectOwner": "davidnguyen179",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
