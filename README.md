@@ -20,19 +20,19 @@ npm i
 **Chrome**
 
 ```bash
-npm run dev-chrome
+npm run app:chrome-dev
 ```
 
 **Edge**
 
 ```bash
-npm run dev-edge
+npm run app:edge-dev
 ```
 
 **Firefox**
 
 ```bash
-npm run dev-firefox
+npm run app:firefox-dev
 ```
 
 ## Production
@@ -41,22 +41,20 @@ npm run dev-firefox
 npm i
 ```
 
-**Chrome**
-
 ```bash
-npm run chrome
+npm run app:chrome
 ```
 
 **Edge**
 
 ```bash
-npm run edge
+npm run app:edge
 ```
 
 **Firefox**
 
 ```bash
-npm run firefox
+npm run app:firefox
 ```
 
 ## Load package to browsers
