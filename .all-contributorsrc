@@ -28,6 +28,15 @@
         "code",
         "test"
       ]
+    },
+    {
+     "login": "3BenLee",
+      "name": "Ben Harned",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35267414?v=4",
+      "profile": "http://benlee3.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
