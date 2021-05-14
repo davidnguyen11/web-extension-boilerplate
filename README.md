@@ -1,7 +1,7 @@
 # Web Extension Boilerplate
 
 <div align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/6290720/99804359-3d584200-2b7e-11eb-9cff-a2d7e207415e.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/6290720/118306393-5ab20b80-b524-11eb-9d70-ac7ed740397b.png" />
   <br />
   <br />
 </div>
