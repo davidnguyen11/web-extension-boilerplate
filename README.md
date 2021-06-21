@@ -147,7 +147,7 @@ You can modify the `.github/workflows` to show the CI/CD flow.
 
 ## Showcase
 
-This boilerplate was used to develop [Spotify Web Extension](https://spotify-extension.netlify.app/)
+- [Spotify Web Extension](https://spotify-extension.netlify.app/)
 
 ## Contributors ✨
 
