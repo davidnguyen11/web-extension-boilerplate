@@ -38,10 +38,12 @@
   },
   "homepage": "https://github.com/davidnguyen179/web-extension-boilerplate#readme",
   "devDependencies": {
+    "@babel/core": "7.12.17",
     "@babel/preset-env": "7.12.11",
     "@babel/preset-typescript": "7.12.7",
     "@types/chrome": "0.0.135",
     "@types/jest": "26.0.20",
+    "@types/node": "14.14.20",
     "@types/sinon": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "4.17.0",
     "@typescript-eslint/parser": "4.17.0",
@@ -59,7 +61,7 @@
     "terser-webpack-plugin": "5.1.1",
     "ts-jest": "26.4.4",
     "ts-loader": "^9.1.1",
-    "typescript": "^4.2.4",
+    "typescript": "4.2.4",
     "web-ext-types": "3.2.1",
     "webpack": "5.18.0",
     "webpack-cli": "4.4.0",
@@ -67,6 +69,9 @@
     "whatwg-fetch": "3.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["npm run code:lint-fix", "npm run code:prettier"]
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm code:lint-fix",
+      "pnpm code:prettier"
+    ]
   }
 }

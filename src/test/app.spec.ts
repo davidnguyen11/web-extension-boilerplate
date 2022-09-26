@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import { createSandbox } from 'sinon';
 import { App } from '../lib/app';
 import * as Dom from '../lib/dom';
 
@@ -7,7 +7,7 @@ describe('testing App', () => {
   let renderDateTime;
 
   beforeEach(() => {
-    sandboxes = sinon.createSandbox();
+    sandboxes = createSandbox();
     renderDateTime = sandboxes.stub(Dom, 'renderDateTime');
   });
 

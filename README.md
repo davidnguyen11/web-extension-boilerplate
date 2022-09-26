@@ -15,50 +15,58 @@ This boilerplate provides a skeleton to start developing cross-browser web exten
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/davidnguyen179/web-extension-boilerplate/pulls)
 ![ci/cd](https://github.com/davidnguyen179/web-extension-boilerplate/workflows/ci/cd/badge.svg)
 
+## Prerequisites
+
+You need to install [**pnpm**](https://pnpm.io/installation)
+
 ## Development
 
 ```bash
-npm i
+npm install -g pnpm
+```
+
+```bash
+pnpm i
 ```
 
 **Chrome**
 
 ```bash
-npm run app:chrome-dev
+pnpm app:chrome-dev
 ```
 
 **Edge**
 
 ```bash
-npm run app:edge-dev
+pnpm app:edge-dev
 ```
 
 **Firefox**
 
 ```bash
-npm run app:firefox-dev
+pnpm app:firefox-dev
 ```
 
 ## Production
 
 ```bash
-npm i
+pnpm i
 ```
 
 ```bash
-npm run app:chrome
+pnpm app:chrome
 ```
 
 **Edge**
 
 ```bash
-npm run app:edge
+pnpm app:edge
 ```
 
 **Firefox**
 
 ```bash
-npm run app:firefox
+pnpm app:firefox
 ```
 
 ## Load package to browsers
