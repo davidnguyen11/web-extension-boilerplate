@@ -13,7 +13,7 @@ This boilerplate provides a skeleton to start developing cross-browser web exten
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/davidnguyen179/web-extension-boilerplate/pulls)
-![ci/cd](https://github.com/davidnguyen179/web-extension-boilerplate/workflows/ci/cd/badge.svg)
+![ci/cd](https://github.com/davidnguyen179/web-extension-boilerplate/workflows/ci/cd/badge.svg) [![by](https://raw.githubusercontent.com/webuild-community/badge/master/svg/by.svg)](https://github.com/davidnguyen179/web-extension-boilerplate)
 
 ## Development
 
