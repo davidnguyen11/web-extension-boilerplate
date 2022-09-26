@@ -5,8 +5,8 @@
   "main": "background.js",
   "scripts": {
     "code:lint": "eslint '**/**/*.{ts,tsx}'",
-    "code:lint-fix": "eslint --fix '**/**/*.{ts,tsx}'",
-    "code:prettier": "prettier --write '**/**/*.{ts,tsx}'",
+    "code:lint-fix": "eslint --fix",
+    "code:prettier": "prettier --write",
     "code:typecheck": "./node_modules/.bin/tsc --noEmit",
     "app:chrome": "rimraf dist && cross-env BROWSER='chrome' webpack --config webpack/webpack.prod.js",
     "app:chrome-dev": "cross-env BROWSER='chrome' webpack --config webpack/webpack.dev.js --watch",
@@ -14,7 +14,9 @@
     "app:edge-dev": "cross-env BROWSER='edge' webpack --config webpack/webpack.dev.js --watch",
     "app:firefox": "rimraf dist && cross-env BROWSER='firefox' webpack --config webpack/webpack.prod.js",
     "app:firefox-dev": "cross-env BROWSER='firefox' webpack --config webpack/webpack.dev.js --watch",
-    "test:unit": "jest"
+    "lint-staged": "lint-staged",
+    "test:unit": "jest",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -49,8 +51,9 @@
     "cross-env": "7.0.3",
     "eslint": "7.21.0",
     "eslint-plugin-import": "2.22.1",
-    "git-hooks-plus": "1.0.1",
+    "husky": "^8.0.1",
     "jest": "26.6.3",
+    "lint-staged": "^13.0.3",
     "prettier": "2.2.1",
     "rimraf": "3.0.2",
     "sinon": "^10.0.0",
@@ -63,5 +66,8 @@
     "webpack-cli": "4.4.0",
     "webpack-merge": "5.7.3",
     "whatwg-fetch": "3.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["npm run code:lint-fix", "npm run code:prettier"]
   }
 }
