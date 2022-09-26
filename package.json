@@ -15,8 +15,7 @@
     "app:firefox": "rimraf dist && cross-env BROWSER='firefox' webpack --config webpack/webpack.prod.js",
     "app:firefox-dev": "cross-env BROWSER='firefox' webpack --config webpack/webpack.dev.js --watch",
     "lint-staged": "lint-staged",
-    "test:unit": "jest",
-    "prepare": "husky install"
+    "test:unit": "jest"
   },
   "repository": {
     "type": "git",
