@@ -139,9 +139,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/immint023"><img src="https://avatars.githubusercontent.com/u/38607460?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Minh Ngo</b></sub></a><br /><a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=immint023" title="Code">💻</a> <a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=immint023" title="Tests">⚠️</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/immint023"><img src="https://avatars.githubusercontent.com/u/38607460?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Minh Ngo</b></sub></a><br /><a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=immint023" title="Code">💻</a> <a href="https://github.com/davidnguyen179/web-extension-boilerplate/commits?author=immint023" title="Tests">⚠️</a> <a href="#infra-immint023" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
