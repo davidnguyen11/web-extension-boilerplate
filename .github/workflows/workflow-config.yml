@@ -15,36 +15,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         id: checkout
+      - name: Installing pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        id: cache
-        env:
-          cache-name: cache-node-modules
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
+          cache: 'pnpm'
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: pnpm install
       - name: Running typecheck... 🩺 🔬 🔭
-        run: npm run code:typecheck
+        run: pnpm code:typecheck
       - name: Running eslint... 👀
-        run: npm run code:lint
+        run: pnpm code:lint
       - name: Running unit test... 🤞 🚑 💊
-        run: npm run test:unit -- --runInBand --coverage
+        run: pnpm test:unit --runInBand --coverage
       - name: Trigger codecov
         run: bash <(curl -s https://codecov.io/bash)
       - name: Run build Chrome
-        run: npm run app:chrome
+        run: pnpm app:chrome
       - name: Run build Firefox
-        run: npm run app:firefox
+        run: pnpm app:firefox
       - name: Run build Edge
-        run: npm run app:edge
+        run: pnpm app:edge
