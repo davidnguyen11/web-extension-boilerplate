@@ -10,5 +10,5 @@ runs:
       with:
         node-version-file: '.nvmrc'
         cache: 'pnpm'
-    - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
-      run: pnpm install --frozen-lockfile
+    # - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+    #   run: pnpm install --frozen-lockfile
