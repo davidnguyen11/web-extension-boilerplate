@@ -5,6 +5,7 @@ jobs:
   installation:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
   linter:
@@ -12,6 +13,7 @@ jobs:
     needs: [installation]
     concurrency: validation-${{ github.ref }}
     steps:
+      - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Running typecheck... 🩺 🔬 🔭
@@ -23,6 +25,7 @@ jobs:
     needs: [installation]
     concurrency: validation-${{ github.ref }}
     steps:
+      - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Running unit test... 🤞 🚑 💊
@@ -40,6 +43,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: [installation, linter, test]
     steps:
+      - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Run build Chrome
