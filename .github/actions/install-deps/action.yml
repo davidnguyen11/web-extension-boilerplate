@@ -1,8 +1,9 @@
 runs:
   using: "composite"
   steps:
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
       with:
         version: 7.12.2
     - name: Setup Node
@@ -10,5 +11,3 @@ runs:
       with:
         node-version-file: '.nvmrc'
         cache: 'pnpm'
-    # - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
-    #   run: pnpm install --frozen-lockfile
