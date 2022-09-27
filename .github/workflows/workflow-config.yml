@@ -3,37 +3,58 @@ name: 'ci/cd'
 on: [push, pull_request]
 
 jobs:
-  test:
-    # Job name
-    name: test
-    # This job runs on Linux
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
+  installation:
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        id: checkout
-      - name: Installing pnpm
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: ./.github/actions/install-deps
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+  linter:
+    runs-on: ubuntu-20.04
+    needs: [installation]
+    concurrency: validation-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: ./.github/actions/install-deps
+      - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+        run: pnpm install --frozen-lockfile
       - name: Running typecheck... 🩺 🔬 🔭
         run: pnpm code:typecheck
       - name: Running eslint... 👀
         run: pnpm code:lint
+  test:
+    runs-on: ubuntu-20.04
+    needs: [installation]
+    concurrency: validation-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: ./.github/actions/install-deps
+      - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+        run: pnpm install --frozen-lockfile
       - name: Running unit test... 🤞 🚑 💊
         run: pnpm test:unit --runInBand --coverage
-      - name: Trigger codecov
-        run: bash <(curl -s https://codecov.io/bash)
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage
+          fail_ci_if_error: true
+          flags: unittests
+          name: codecov-umbrella
+          verbose: true
+  build:
+    runs-on: ubuntu-20.04
+    needs: [installation, linter, test]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: ./.github/actions/install-deps
+      - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+        run: pnpm install --frozen-lockfile
       - name: Run build Chrome
         run: pnpm app:chrome
       - name: Run build Firefox
