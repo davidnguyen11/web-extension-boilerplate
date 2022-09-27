@@ -6,6 +6,7 @@ jobs:
   installation:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v3
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
@@ -15,6 +16,7 @@ jobs:
     needs: [installation]
     concurrency: validation-${{ github.ref }}
     steps:
+      - uses: actions/checkout@v3
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
@@ -28,6 +30,7 @@ jobs:
     needs: [installation]
     concurrency: validation-${{ github.ref }}
     steps:
+      - uses: actions/checkout@v3
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
@@ -47,6 +50,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: [installation, linter, test]
     steps:
+      - uses: actions/checkout@v3
       - name: Install dependencies
         uses: ./.github/actions/install-deps
       - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
