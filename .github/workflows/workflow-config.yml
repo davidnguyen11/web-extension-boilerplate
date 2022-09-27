@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
-
       - name: run eslint
         run: pnpm run lint
   build:
