@@ -1,54 +1,26 @@
-name: Test
-on:
-  push:
+name: CI
+
+on: [pull_request]
+
 jobs:
-  installation:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: ../actions/install-deps
-  linter:
-    runs-on: ubuntu-20.04
-    needs: [installation]
-    concurrency: validation-${{ github.ref }}
+  lint:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
-      - name: Running typecheck... 🩺 🔬 🔭
-        run: pnpm code:typecheck
-      - name: Running eslint... 👀
-        run: pnpm code:lint
-  test:
-    runs-on: ubuntu-20.04
-    needs: [installation]
-    concurrency: validation-${{ github.ref }}
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: ./.github/actions/install-deps
-      - name: Running unit test... 🤞 🚑 💊
-        run: pnpm test:unit --runInBand --coverage
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage
-          fail_ci_if_error: true
-          flags: unittests
-          name: codecov-umbrella
-          verbose: true
+
+      - name: run eslint
+        run: pnpm run lint
   build:
-    runs-on: ubuntu-20.04
-    needs: [installation, linter, test]
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install-deps
-      - name: Run build Chrome
-        run: pnpm app:chrome
-      - name: Run build Firefox
-        run: pnpm app:firefox
-      - name: Run build Edge
-        run: pnpm app:edge
+
+      - name: build
+        run: pnpm run build
+
