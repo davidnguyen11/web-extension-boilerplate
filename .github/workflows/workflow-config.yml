@@ -1,4 +1,4 @@
-name: spotify extension ci/cd
+name: Test
 on:
   push:
 jobs:
@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        uses: ./.github/actions/install-deps
+        uses: .github/actions/install-deps
   linter:
     runs-on: ubuntu-20.04
     needs: [installation]
